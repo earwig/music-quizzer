@@ -22,7 +22,7 @@ from urllib import urlretrieve
 __author__ = "Ben Kurtovic"
 __copyright__ = "Copyright (c) 2011 by Ben Kurtovic"
 __license__ = "MIT License"
-__version__ = "0.1"
+__version__ = "0.1.1"
 __email__ = "ben.kurtovic@verizon.net"
 
 config_filename = "config.cfg"
@@ -365,6 +365,9 @@ def get_missing_pieces(root):
 def do_pieces_download(pieces, status, dl_button, status_label, window):
     global download_complete
     dl_button.configure(state=DISABLED)
+    
+    if not os.path.exists(piece_dir):
+        os.mkdir(piece_dir)
     
     counter = 1
     for piece in pieces:
