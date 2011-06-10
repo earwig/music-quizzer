@@ -14,7 +14,7 @@ From Terminal (`/Applications/Utiliies/Terminal`), do:
     sudo port install py26-game
 
 Next,
-[download MusicQuizzer](https://github.com/earwig/music-quizzer/tarball/v0.1)
+[download MusicQuizzer](https://github.com/earwig/music-quizzer/tarball/v0.1.1)
 and uncompress it. Move the folder wherever you want (keep its contents
 intact!) and double-click on `mac_osx.sh` to use the quizzer.
 
@@ -29,7 +29,7 @@ Next, download and install pygame from
 [here](http://pygame.org/ftp/pygame-1.9.2a0.win32-py2.7.msi).
 
 Finally,
-[download MusicQuizzer](https://github.com/earwig/music-quizzer/zipball/v0.1)
+[download MusicQuizzer](https://github.com/earwig/music-quizzer/zipball/v0.1.1)
 and extract it wherever you want. To use, simply double-click on the
 `musicquizzer` file inside (do not move or delete any of the other files).
 
@@ -42,7 +42,7 @@ pygame and tk with:
     sudo apt-get install python-pygame python-tk
 
 Then,
-[download MusicQuizzer](https://github.com/earwig/music-quizzer/tarball/v0.1)
+[download MusicQuizzer](https://github.com/earwig/music-quizzer/tarball/v0.1.1)
 and execute the program with `python musicquizzer.py` from your terminal.
 
 # Usage
