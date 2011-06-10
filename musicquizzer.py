@@ -366,6 +366,9 @@ def do_pieces_download(pieces, status, dl_button, status_label, window):
     global download_complete
     dl_button.configure(state=DISABLED)
     
+    if not os.path.exists(piece_dir):
+        os.mkdir(piece_dir)
+    
     counter = 1
     for piece in pieces:
         url = config.get("general", "base_url") + config.get(piece, "url")
