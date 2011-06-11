@@ -22,7 +22,7 @@ from urllib import urlretrieve
 __author__ = "Ben Kurtovic"
 __copyright__ = "Copyright (c) 2011 by Ben Kurtovic"
 __license__ = "MIT License"
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __email__ = "ben.kurtovic@verizon.net"
 
 config_filename = "config.cfg"
@@ -211,13 +211,10 @@ class AnswerSheet(object):
                 before = time.time()
                 self.play_piece(piece)
                 after = time.time()
-                retries = 1
-                while after - before < 3 or retries >= 100:  # if the piece
-                    before = time.time()   # played for less than 3 seconds,
-                    self.play_piece(piece) # assume something went wrong
-                    after = time.time()    # loading and try to replay it,
-                    retries += 1           # but don't get stuck in a loop if
-                                           # we legitimately can't play it
+                while after - before < 3:  # if the piece played for less than
+                    before = time.time()   # 3 seconds, assume something went
+                    self.play_piece(piece) # wrong loading and try to replay it
+                    after = time.time()
                 self.playing.set("That was Excerpt {0}...".format(cur_excerpt))
                 cur_excerpt = chr(ord(cur_excerpt) + 1)
                 time.sleep(break_length)

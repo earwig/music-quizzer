@@ -13,23 +13,26 @@ From Terminal (`/Applications/Utiliies/Terminal`), do:
     sudo port install python26
     sudo port install py26-game
 
+If you are having troubles with the latter command, try downloading the direct
+[installer](http://pygame.org/ftp/pygame-1.9.1release-py2.6-macosx10.5.zip).
+
 Next,
-[download MusicQuizzer](https://github.com/earwig/music-quizzer/tarball/v0.1.1)
+[download MusicQuizzer](https://github.com/earwig/music-quizzer/tarball/v0.1.2)
 and uncompress it. Move the folder wherever you want (keep its contents
-intact!) and double-click on `mac_osx.sh` to use the quizzer.
+intact!) and double-click on `mac_osx.command` to use the quizzer.
 
 ## Windows
 
 MusicQuizzer is written in Python, a language that does not come with Windows
-by default. Download the latest version of Python 2.7.x
-[here](http://python.org/download/) (_not_ Python 3). Use the default settings
-during installation.
+by default. Download the installer for Python 2.7.1
+[here](http://python.org/ftp/python/2.7.1/python-2.7.1.msi). Use the default
+settings during installation.
 
 Next, download and install pygame from
 [here](http://pygame.org/ftp/pygame-1.9.2a0.win32-py2.7.msi).
 
 Finally,
-[download MusicQuizzer](https://github.com/earwig/music-quizzer/zipball/v0.1.1)
+[download MusicQuizzer](https://github.com/earwig/music-quizzer/zipball/v0.1.2)
 and extract it wherever you want. To use, simply double-click on the
 `musicquizzer` file inside (do not move or delete any of the other files).
 
@@ -42,7 +45,7 @@ pygame and tk with:
     sudo apt-get install python-pygame python-tk
 
 Then,
-[download MusicQuizzer](https://github.com/earwig/music-quizzer/tarball/v0.1.1)
+[download MusicQuizzer](https://github.com/earwig/music-quizzer/tarball/v0.1.2)
 and execute the program with `python musicquizzer.py` from your terminal.
 
 # Usage
