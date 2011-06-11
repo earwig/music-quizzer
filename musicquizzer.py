@@ -211,13 +211,10 @@ class AnswerSheet(object):
                 before = time.time()
                 self.play_piece(piece)
                 after = time.time()
-                retries = 1
-                while after - before < 3 or retries >= 100:  # if the piece
-                    before = time.time()   # played for less than 3 seconds,
-                    self.play_piece(piece) # assume something went wrong
-                    after = time.time()    # loading and try to replay it,
-                    retries += 1           # but don't get stuck in a loop if
-                                           # we legitimately can't play it
+                while after - before < 3:  # if the piece played for less than
+                    before = time.time()   # 3 seconds, assume something went
+                    self.play_piece(piece) # wrong loading and try to replay it
+                    after = time.time()
                 self.playing.set("That was Excerpt {0}...".format(cur_excerpt))
                 cur_excerpt = chr(ord(cur_excerpt) + 1)
                 time.sleep(break_length)
