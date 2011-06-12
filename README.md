@@ -6,25 +6,22 @@ multiple choice questions about them.
 
 ## Mac OS X
 
-Get [MacPorts](http://www.macports.org/install.php), if you don't have it.
+First, download and install Python 2.6.6 from
+[here](http://www.python.org/ftp/python/2.6.6/python-2.6.6-macosx10.3.dmg).
+Later versions of Python are unsupported on Mac OS X because pygame does not
+run on them.
 
-From Terminal (`/Applications/Utiliies/Terminal`), do:
+Next, download and install pygame from 
+[here](http://pygame.org/ftp/pygame-1.9.1release-py2.6-macosx10.5.zip).
 
-    sudo port install python26
-    sudo port install py26-game
-
-If you are having troubles with the latter command, try downloading the direct
-[installer](http://pygame.org/ftp/pygame-1.9.1release-py2.6-macosx10.5.zip).
-
-Next,
+Finally,
 [download MusicQuizzer](https://github.com/earwig/music-quizzer/tarball/v0.1.2)
-and uncompress it. Move the folder wherever you want (keep its contents
-intact!) and double-click on `mac_osx.command` to use the quizzer.
+and extract it wherever you want. To use, simply double-click on the
+`mac_osx.command` file inside (do not move or delete any of the other files).
 
 ## Windows
 
-MusicQuizzer is written in Python, a language that does not come with Windows
-by default. Download the installer for Python 2.7.1
+First, download the installer for Python 2.7.1 from
 [here](http://python.org/ftp/python/2.7.1/python-2.7.1.msi). Use the default
 settings during installation.
 
@@ -44,7 +41,7 @@ pygame and tk with:
 
     sudo apt-get install python-pygame python-tk
 
-Then,
+Finally,
 [download MusicQuizzer](https://github.com/earwig/music-quizzer/tarball/v0.1.2)
 and execute the program with `python musicquizzer.py` from your terminal.
 
@@ -72,12 +69,13 @@ The music pieces are located in `pieces/`, in `.mp3` format. The file
     era: Romantic
     genre: Lied
     form: Through-composed
-    url: http://stuy.enschool.org/music/10_The_Erlking_Erlkonig.mp3
+    url: /music/10_The_Erlking_Erlkonig.mp3
 
-...and so-on. The section's header is the name of the file in `pieces/` (or
-whatever directory you have chosen), and the fields hold the information that
+The section's header is the name of the file in `pieces/` (or whatever
+directory you have chosen), and the fields hold the information that
 MusicQuizzer will use to generate questions. The exception is the `url` field,
-which is the _direct_ URL that MusicQuizzer will use to download the piece if
+which is the _direct_ URL (when combined with the `base_url` setting in the
+`[general]` header) that MusicQuizzer will use to download the piece if
 it does not have a file with that name.
 
 Feel free to rename any of the pieces, delete them, add totally new ones, or
